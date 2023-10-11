@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --color-bg-dark: #222;
+  --color-bg-primary: #eee;
+  --color-bg-secondary: #fff;
+  --color-bg-alive: #55cc44;
+  --color-bg-dead: #f00;
+  --color-border: #3e7486;
+  --color-text-main: #73bad0;
+  --color-text-light: #fff;
+  --color-text-dark: #666;
+}
+
+/* GLOBAL STYLES ------------------------------------------------------------ */
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  color: unset;
+  text-decoration: none;
+}
+
+html,
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.full-width-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-text-container {
+  max-width: 728px;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-description {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.z10 {
+  z-index: 10;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.color-bg-primary {
+  background-color: var(--color-bg-primary);
+}
+
+.color-bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.color-bg-alive {
+  background-color: var(--color-bg-alive);
+}
+
+.color-bg-dead {
+  background-color: var(--color-bg-dead);
+}
+
+.color-text-main {
+  color: var(--color-text-main);
+}
+
+.color-text-light {
+  color: var(--color-text-light);
+}
+
+.color-text-dark {
+  color: var(--color-text-dark);
+}
+
+.normal-section {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+/* TITLE SECTION STYLES ------------------------------------------------------------ */
+
+.title-section {
+  position: relative;
+  height: 260px;
+}
+
+.title-section-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+  background-image: url("https://raw.githubusercontent.com/devsuperior/bds-assets/main/sds/dsrickbg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* CARD STYLES ------------------------------------------------------------ */
+
+.cards-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card-char {
+  color: var(--color-text-main);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.card-char:hover {
+  border: 2px solid var(--color-border);
+}
+
+.card-char-top img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-char-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-char-bottom {
+  padding: 20px;
+}
+
+.card-char-status-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-char-status {
+  height: 8px;
+  width: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.card-char-attribute {
+  margin-top: 10px;
+  color: var(--color-text-dark);
+}
+
+.card-char-attribute h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+/* FOOTER STYLES ------------------------------------------------------------ */
+
+.main-footer {
+  height: 260px;
+  display: flex;
+  align-items: center;
+}
+
+.main-footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* MEDIA QUERIES ------------------------------------------------------------ */
+
+@media (min-width: 576px) {
+  .full-width-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-subtitle {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .main-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: unset;
+    gap: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-subtitle {
+    font-size: 36px;
+  }
+}

@@ -1,4 +1,4 @@
-import { Character } from "../../types/character";
+import { CharStatus, Character } from "../../types/character";
 
 type Props = {
     char: Character;
@@ -14,8 +14,8 @@ export default function Card({ char }: Props) {
             <div className="card-char-bottom">
                 <h3 className="card-char-title">{char.name}</h3>
                 <div className="card-char-status-container color-text-dark">
-                    <span className="card-char-status color-bg-dead"></span>
-                    <p>{char.status}</p>
+                    <span className={`card-char-status ${char.status === "Alive" ? "color-bg-alive" : "color-bg-dead"}`}></span>
+                    <p>{statusToPt(char.status)}</p>
                 </div>
                 <div className="card-char-attribute">
                     <h4>Origem</h4>
@@ -24,4 +24,14 @@ export default function Card({ char }: Props) {
             </div>
         </div>
     );
+}
+
+function statusToPt(value: CharStatus) : string {
+    if (value === "Alive") {
+        return "Vivo";
+    }
+    if (value === "Dead") {
+        return "Morto";
+    }
+    return "Desconhecido";
 }

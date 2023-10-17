@@ -1,4 +1,4 @@
-export type CharStatus = "Alive" | "Dead" | "Unknown";
+export type CharStatus = "Alive" | "Dead" | "unknown";
 
 export type CharOrigin = {
     name: string;
